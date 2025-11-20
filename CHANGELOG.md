@@ -16,6 +16,46 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [2.1.1] - 2025-11-20
+
+### 🔧 CORREÇÃO CRÍTICA - Layout Elegante e Minimalista
+
+**FIX**: Corrigido layout quebrado, fontes gigantes e design desconexo
+
+### Corrigido
+- 🐛 **Fontes Gigantes**: Redução de 36-43% em todos os tamanhos
+  - h1: 4.5rem → 2.75rem
+  - h2: 3.5rem → 2.25rem
+  - h3: 2rem → 1.5rem
+  - Parágrafos: 1.125rem → 1.0625rem
+- 🐛 **Espaçamento Excessivo**: Layout mais coeso
+  - Seções: 10rem → 5-6rem entre seções
+  - Cards padding: reduzido de 4-5rem para 2rem
+  - Grid gaps: reduzido em 25-33%
+- 🐛 **Hover Effects Exagerados**: Movimentos sutis
+  - Transform: -10px/-12px → -4px
+  - Sombras normais em vez de glow excessivo
+- 🐛 **Ícones Grandes Demais**: Reduzidos de 3.5rem para 2rem (43% menor)
+- 🐛 **Layout Quebrado**: Grid gaps e padding harmonizados
+
+### Melhorado
+- ✨ **Typography**: Font-weight 800 → 700 (mais elegante)
+- ✨ **Line-height**: 1.2 → 1.3 (mais legível)
+- ✨ **Letter-spacing**: -0.02em → -0.01em (mais suave)
+- ✨ **Buttons**: Padding e fontes menores, mais refinados
+- ✨ **Badges**: Tamanhos reduzidos para 0.75-0.8125rem
+- ✨ **Border-radius**: radius-xl → radius-lg (mais sutil)
+- ✨ **Backdrop-filter**: blur(20px) → blur(15px) (melhor performance)
+
+### Design Premium Real
+- Layout minimalista e elegante
+- Espaçamento harmonioso e coeso
+- Tipografia equilibrada e profissional
+- Hover effects sutis e sofisticados
+- Visual limpo e premium
+
+---
+
 ## [2.1.0] - 2025-11-20
 
 ### 🌟 REDESIGN PREMIUM EDITION - Inspirado em ClickMax.io
