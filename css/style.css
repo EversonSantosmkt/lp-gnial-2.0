@@ -195,16 +195,26 @@ p {
     align-items: center;
     justify-content: center;
     gap: var(--space-1);
-    padding: 0.875rem 1.75rem;
+    padding: 0.75rem 1.25rem;
     border-radius: var(--radius-full);
     font-weight: 600;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     letter-spacing: 0.01em;
     transition: all var(--transition);
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+        white-space: nowrap;
+    }
 }
 
 .btn::before {
@@ -262,8 +272,15 @@ p {
 }
 
 .btn-large {
-    padding: 1rem 2.25rem;
-    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+    .btn-large {
+        padding: 1rem 2.25rem;
+        font-size: 1rem;
+    }
 }
 
 /* ==========================================
@@ -476,11 +493,18 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: calc(90px + var(--space-8));
-    padding-bottom: var(--space-8);
+    padding-top: calc(70px + var(--space-6));
+    padding-bottom: var(--space-6);
     background: var(--gradient-dark);
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding-top: calc(90px + var(--space-8));
+        padding-bottom: var(--space-8);
+    }
 }
 
 .hero::before {
@@ -548,19 +572,33 @@ section {
 
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--space-4);
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    max-width: 100%;
     margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+    .hero-stats {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--space-4);
+        max-width: 900px;
+    }
+}
+
 .stat {
-    padding: var(--space-3);
+    padding: var(--space-2);
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(162, 2, 133, 0.3);
     transition: all var(--transition);
+}
+
+@media (min-width: 768px) {
+    .stat {
+        padding: var(--space-3);
+    }
 }
 
 .stat:hover {
@@ -571,7 +609,7 @@ section {
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 4vw, 2rem);
     font-weight: 800;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
@@ -581,7 +619,7 @@ section {
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: clamp(0.6875rem, 2vw, 0.875rem);
     color: var(--gray);
     margin-top: var(--space-1);
     font-weight: 500;
