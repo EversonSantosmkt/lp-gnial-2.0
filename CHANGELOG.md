@@ -16,6 +16,86 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [2.1.0] - 2025-11-20
+
+### 🌟 REDESIGN PREMIUM EDITION - Inspirado em ClickMax.io
+
+**BREAKING CHANGE**: Transformação completa do design para estilo luxury premium com ar de soberania
+
+### Adicionado
+- ✨ **Background Patterns Premium**: Radial gradients sofisticados com efeitos de profundidade
+- 🎨 **Glassmorphism**: backdrop-filter blur(20px) em todos os cards para efeito vidro fosco
+- 💎 **Sistema de Sombras Premium**:
+  - Glow effects (shadow-glow, shadow-glow-lg)
+  - Gold shadows para badges premium
+  - Sombras XL para elementos destaque
+- 🌈 **Gradientes Sofisticados**:
+  - Gradiente dourado (gold gradient) para badges e preços
+  - Gradientes roxos aprimorados com 3 cores
+  - Overlay gradients para hover effects
+- ⚡ **Animações Premium**:
+  - Pulse animation no hero background
+  - Shine effect nos botões (::before sliding gradient)
+  - Hover effects elaborados (translateY + glow + scale)
+- 🎯 **Ícones Profissionais**: Substituídos emojis infantilizados (🚀📞📲) por símbolos premium (✦ ◆ ★)
+
+### Melhorado
+- 🎨 **CSS Premium Edition**: Expandido para 1510 linhas com design system completo
+- 📐 **Design System**: Variáveis CSS organizadas para:
+  - 7 cores premium (dark: #0A0A0F, primary-light, etc)
+  - 5 tipos de sombras (sm, md, lg, xl, glow, gold)
+  - 8 níveis de espaçamento (space-1 até space-16)
+  - 5 border radius (sm, md, lg, xl, full)
+  - Z-index scale organizado
+- 🎭 **Typography**:
+  - Tamanhos fluidos com clamp() expandidos
+  - Letter-spacing aprimorado (-0.02em nos headings)
+  - Line-height aumentado para 1.8
+- 🖱️ **Hover Effects**:
+  - Transform translateY(-12px) em cards
+  - Glow shadows intensificados
+  - ::before overlays com opacity transition
+- 📱 **Container**: Expandido de 1200px para 1400px
+- ⚙️ **Transições**: Cubic-bezier(0.4, 0, 0.2, 1) para movimentos suaves
+- 🎯 **Backdrop-filter**:
+  - Navbar com saturate(180%)
+  - Cards com blur(20px)
+  - Tags e badges com blur(10px)
+
+### Estilo Premium Implementado
+- **Hero Section**: Background radial gradient pulsante com animação 8s
+- **Pain Cards**: Overlay gradients + ::before effects + hover glow
+- **Feature Cards**: Radial gradient background animado no hover
+- **Pricing Cards**:
+  - Badges dourados com shadow-gold
+  - Border 3px nos featured
+  - Transform scale no hover
+- **Buttons**:
+  - Shine effect (sliding gradient)
+  - Shadow glow em primary
+  - Backdrop-filter em secondary/outline
+- **Navbar**:
+  - Background rgba com blur(20px)
+  - Border com primary color
+  - Logo com drop-shadow e rotate no hover
+
+### Design Premium
+- Background fixo com padrões radiais e lineares
+- Cards uniformes com glassmorphism
+- Espaçamento generoso (space-16 = 10rem)
+- Tipografia expandida e elegante
+- Cores mais escuras (#0A0A0F vs #0E0C20)
+- Gradientes mais suaves e sofisticados
+- Animações mais lentas (transition-slow: 0.6s)
+
+### Performance
+- CSS otimizado com custom properties bem organizadas
+- Animações performáticas (opacity, transform)
+- Z-index scale para melhor compositing
+- Transições com cubic-bezier otimizado
+
+---
+
 ## [2.0.0] - 2025-11-20
 
 ### 🎨 Refatoração Completa - Design Premium e Limpo
