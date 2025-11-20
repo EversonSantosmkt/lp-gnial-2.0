@@ -1261,11 +1261,17 @@ section {
    ========================================== */
 
 .cta-section {
-    padding: var(--space-16) 0;
+    padding: var(--space-12) 0;
     background: var(--gradient-purple);
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .cta-section {
+        padding: var(--space-16) 0;
+    }
 }
 
 .cta-section::before {
@@ -1289,10 +1295,12 @@ section {
 .cta-content h2 {
     margin-bottom: var(--space-6);
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .cta-content > p {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     margin-bottom: var(--space-8);
     color: var(--light-gray);
 }
