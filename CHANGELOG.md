@@ -16,6 +16,55 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [2.1.2] - 2025-11-20
+
+### 🐛 CORREÇÃO CRÍTICA - Mobile Overflow Eliminado
+
+**FIX**: Resolvido completamente problema de quebra de layout no mobile
+
+### Corrigido
+- 🐛 **Hero Stats quebrando mobile**:
+  - Grid: `repeat(3, 1fr)` ao invés de `minmax(180px)`
+  - Gap reduzido: space-4 → space-2 no mobile
+  - Padding: space-3 → space-2 no mobile
+  - Font-sizes responsivos com clamp()
+- 🐛 **Botões estourando tela**:
+  - Padding: 0.875rem/1.75rem → 0.75rem/1.25rem mobile
+  - White-space: nowrap → normal (permite quebra)
+  - Font-size: 0.9375rem → 0.875rem mobile
+  - Max-width: 100% adicionado
+- 🐛 **Textos quebrando laterais**:
+  - Hero-title: padding lateral (space-1)
+  - Hero-description: max-width 100% + padding
+  - Font-size responsivo: clamp(0.9375rem-1.0625rem)
+- 🐛 **Overflow horizontal**:
+  - HTML: max-width 100% + overflow-x hidden
+  - Body: max-width 100vw
+  - Container: padding space-3 → space-2 mobile
+
+### Melhorado
+- ✨ **Hero Section Mobile**:
+  - Padding-top: calc(90px + space-8) → calc(70px + space-6)
+  - Padding-bottom: space-8 → space-6
+  - Melhor uso do espaço vertical
+- ✨ **Stats Mobile**:
+  - Números: clamp(1.25rem-2rem)
+  - Labels: clamp(0.6875rem-0.875rem)
+  - 3 colunas equilibradas
+- ✨ **Responsividade Total**:
+  - Todos elementos com @media queries
+  - Desktop mantém valores originais
+  - Mobile otimizado para 320px+
+
+### Design Mobile
+- Layout compacto sem overflow
+- Textos legíveis e bem espaçados
+- Botões acessíveis e clicáveis
+- Stats bem distribuídos em 3 colunas
+- Nenhum elemento estoura lateralmente
+
+---
+
 ## [2.1.1] - 2025-11-20
 
 ### 🔧 CORREÇÃO CRÍTICA - Layout Elegante e Minimalista
