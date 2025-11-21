@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Cores */
     --primary: #A20285;
@@ -70,7 +74,8 @@ body {
     font-family: var(--font-family);
     background: var(--bg-dark);
     color: var(--white);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -102,6 +107,7 @@ button {
    ======================================== */
 
 .slide-nav {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -183,37 +189,40 @@ button {
    ======================================== */
 
 .slides-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(100%);
-    transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    min-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid rgba(162, 2, 133, 0.2);
+}
+
+.slide:last-child {
+    border-bottom: none;
 }
 
 .slide.active {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
+    transform: none;
 }
 
 .slide.exit-left {
-    transform: translateX(-100%);
-    opacity: 0;
+    transform: none;
+    opacity: 1;
 }
 
 .slide.enter-right {
-    transform: translateX(100%);
+    transform: none;
 }
 
 .slide-bg {
@@ -259,8 +268,8 @@ button {
     z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
-    padding: var(--space-8) var(--space-4) calc(var(--space-8) + 80px);
-    height: 100%;
+    padding: var(--space-8) var(--space-4);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1581,8 +1590,14 @@ button {
 }
 
 @media (max-width: 768px) {
+    .slide {
+        min-height: auto;
+        padding: var(--space-6) 0;
+    }
+
     .slide-content {
-        padding: var(--space-4) var(--space-3) calc(var(--space-4) + 80px);
+        padding: var(--space-4) var(--space-3);
+        min-height: auto;
     }
 
     .slide-title {
@@ -1830,8 +1845,14 @@ button {
         font-size: 14px;
     }
 
+    .slide {
+        min-height: auto;
+        padding: var(--space-4) 0;
+    }
+
     .slide-content {
-        padding: var(--space-3) var(--space-2) calc(var(--space-3) + 80px);
+        padding: var(--space-3) var(--space-2);
+        min-height: auto;
     }
 
     .slide-title {
@@ -2167,8 +2188,13 @@ button {
 
 /* Telas extra pequenas (< 360px) */
 @media (max-width: 360px) {
+    .slide {
+        padding: var(--space-3) 0;
+    }
+
     .slide-content {
-        padding: var(--space-2) var(--space-2) calc(var(--space-2) + 70px);
+        padding: var(--space-2);
+        min-height: auto;
     }
 
     .slide-title {
