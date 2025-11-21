@@ -2025,25 +2025,30 @@ button {
     }
 
     .chaos-circle {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .chaos-circle::before,
+    .chaos-circle::before {
+        content: '🤖';
+        font-size: 4rem;
+        position: absolute;
+        z-index: 2;
+    }
+
     .chaos-circle::after {
-        width: 190px;
-        height: 190px;
+        display: none;
     }
 
     .tool-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
+        display: none;
     }
 
-    .tool-1 {
-        font-size: 0.6rem;
-        padding: 2px;
+    .disconnect-lines {
+        display: none;
     }
 
     .chaos-text,
