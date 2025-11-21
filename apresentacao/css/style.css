@@ -2025,20 +2025,10 @@ button {
     }
 
     .chaos-circle {
-        width: 200px;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
     }
 
-    .chaos-circle::before {
-        content: '🤖';
-        font-size: 4rem;
-        position: absolute;
-        z-index: 2;
-    }
-
+    .chaos-circle::before,
     .chaos-circle::after {
         display: none;
     }
