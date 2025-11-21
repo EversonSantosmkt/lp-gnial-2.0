@@ -1762,33 +1762,37 @@ button {
 
     .chaos-diagram {
         max-width: 100%;
-        padding: var(--space-4);
+        padding: var(--space-2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .chaos-circle {
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
     }
 
     .chaos-circle::before,
     .chaos-circle::after {
-        width: 250px;
-        height: 250px;
+        width: 210px;
+        height: 210px;
     }
 
     .tool-icon {
-        width: 42px;
-        height: 42px;
-        font-size: 1rem;
+        width: 35px;
+        height: 35px;
+        font-size: 0.875rem;
     }
 
     .tool-1 {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .chaos-text {
         font-size: 0.875rem;
         padding: 0 var(--space-2);
+        text-align: center;
     }
 
     .auto-circle {
@@ -2016,25 +2020,30 @@ button {
         font-size: 1rem;
     }
 
+    .chaos-diagram {
+        padding: var(--space-2) 0;
+    }
+
     .chaos-circle {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
     }
 
     .chaos-circle::before,
     .chaos-circle::after {
-        width: 230px;
-        height: 230px;
+        width: 190px;
+        height: 190px;
     }
 
     .tool-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
     }
 
     .tool-1 {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+        padding: 2px;
     }
 
     .chaos-text,
